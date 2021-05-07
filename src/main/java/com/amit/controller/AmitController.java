@@ -8,9 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/service")
 public class AmitController {
 
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public String HelloSpringSecurity() {
 		return "Welcome to Spring Security !";
+	}
+	
+	@GetMapping("/user")
+	public String loginAsUser() {
+		return "Welcome User !";
+	}
+	
+	@GetMapping("/admin")
+	public String loginAsAdmin() {
+		return "Welcome Admin !";
 	}
 
 }
